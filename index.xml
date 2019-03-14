@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>柚紫</title>
+    <link>https://kehux.win/</link>
+    <description>Recent content on 柚紫</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 14 Mar 2019 16:54:37 +0800</lastBuildDate>
+    
+	<atom:link href="https://kehux.win/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Start</title>
+      <link>https://kehux.win/posts/start/</link>
+      <pubDate>Thu, 14 Mar 2019 16:54:37 +0800</pubDate>
+      
+      <guid>https://kehux.win/posts/start/</guid>
+      <description>2018-03-29 上学的时候，时间被分成许多次考试。月考，期中考，年末考到大学的一学期一考。再不济的大学时光也被闲闲散散的第几周所限制着。
+工作了之后的时光像流沙，每天忙忙碌碌，却又充满了焦虑与不安。
+我蹉跎的青春，我浪费的、迷茫的、跌跌撞撞的青春好像也就像每年的花期，时间见证了一代代年轻生命的饱满活力与美好。
+我无数次在回念过往，无数次在感慨，但我不得不向前走。就像那段无疾而终的情感、像岔路口走开再也不回头的朋友。
+我低头、沉迷、我打游戏释压、我自暴自弃、放任自我。
+而我终究无法安于现实，我并非心怀远大理想，我仅有一个小小的梦想。
+我心中有无数个想去做的事情，却有总也不能静下心来去做。
+直到近些日子，我发现自己的一举一动好像都在无形中影响着他人，或大或小。我被别人敬仰着、信任着。没有什么比这种责任感更能驱动我，我以为我不能做到的事情，大家都很信任的说信任我。
+你迷茫的时候会询问我的意见，我会觉得我参与了你的人生。
+被人需要的感觉是很美妙的。
+家中杂事太多，我曾以为自己身边空无一人，但冰冰、佳露的陪伴让我倍感安慰。大家在有困难的时候都来找我，这让我很开心，我被需要也被信任着。我会很认真的去完成你们嘱托我办的事情。
+我想让自己很充实，我很喜欢现在公司可以有很大的成长空间。我会努力总结工作中的成长，小明推荐给了我好多书籍。
+我最近的目标就是跑步加读书。
+我希望自己能够以一个很好的心态去做事情，工作也好、其他也好。
+絮絮叨叨这么多，就是希望自己放下过去，以一个好的心态面对现在的生活。</description>
+    </item>
+    
+    <item>
+      <title>PostCss</title>
+      <link>https://kehux.win/posts/postcss/</link>
+      <pubDate>Thu, 14 Mar 2019 16:53:19 +0800</pubDate>
+      
+      <guid>https://kehux.win/posts/postcss/</guid>
+      <description>PostCSS 为什么要使用PostCss css规范在浏览器兼容性方面一直存在各种各样的问题，不同浏览器在css规范的实现方面的进度也存在很大差异。
+PostCSS介绍 PostCSS 是一个允许使用 JS 插件转换样式的工具。
+ 检查（lint）你的 CSS 支持 CSS Variables 和 Mixins 编译尚未被浏览器广泛支持的先进的 CSS 语法 内联图片  使用方法  在你的构建工具中查找并添加PostCSS扩展 选择插件并将他们添加到你的PostCSS处理队列中  在 webpack.config.js 里使用 postcss-loader : { loader: &#39;postcss-loader&#39; }   创建postcss.config.js   module.exports = { plugins: [ require(&#39;precss&#39;), require(&#39;autoprefixer&#39;) ] }  ​
+提前使用先进的CSS特性 autoprefixer 添加了vender浏览器前缀。 Autoprefixer是postCSS的一个插件用来转换css并且根据css规则填充属性前缀。</description>
+    </item>
+    
+    <item>
+      <title>GraphQL</title>
+      <link>https://kehux.win/posts/graphql/</link>
+      <pubDate>Thu, 14 Mar 2019 16:52:19 +0800</pubDate>
+      
+      <guid>https://kehux.win/posts/graphql/</guid>
+      <description>GraphQL 入门 GraphQL是一个用于API的查询语言，使用你自己定义的类型系统在服务器端进行查询。
+ 一旦GraphQL运行，它可以用来发送GraphQL查询去验证和执行。
+ GraphQL的实现：
+ 使用Nodejs实现GraphQL服务器   mkdir test &amp;amp;&amp;amp; cd ./test npm install express --save npm install babel --save touch ./server.js touch ./index.js   index.js: require(&#39;babel/register&#39;); require(&#39;./server.js&#39;);   //server.js import express from &#39;express&#39;; let app = express(); let PORT = 3000; app.post(&#39;/graphql&#39;, (req, res) =&amp;gt; { res.send(&#39;Hello!&#39;); }); let server = app.listen(PORT, function() { let host = server.address().address; let port = server.address().port; console.</description>
+    </item>
+    
+    <item>
+      <title>Gatsby</title>
+      <link>https://kehux.win/posts/gatsby/</link>
+      <pubDate>Thu, 14 Mar 2019 16:51:52 +0800</pubDate>
+      
+      <guid>https://kehux.win/posts/gatsby/</guid>
+      <description>Gatsby React网站快速生成器 安装  npm install &amp;ndash;global gatsby-cli
+ #Gatsby快速入门
+使用Gatsby命令行  创建新项目 gatsby new gatsby-site
+ cd gatsby-site
+ gatsby develop Gastby 将会开启一个热加载环境，可以在本地8000端口看到
+ 在src/pages下进行编辑javascript页面。保存改动后，浏览器会实时刷新。
+ gatsby build Gastby 将会执行优化的生成构建，生成静态HTML和JavaScript包文件。
+ gatsby serve Gastby开启一个本地HTML服务去测试你构建的网站。
+  ## 目录
+ 基础 &amp;ndash;开始新项目、开发部署网站
+ 介绍如何在Gatsby中使用css。在css模块和Typography.js 中探索。
+ 探索嵌套布局。布局是网站的一部分，可以在多个页面（如页眉和页脚）中重复使用。
+ 了解如何使用Gatsby的数据层。探索源代码和变压器插件。介绍编程页面以及如何编写GraphQL查询。在本教程的这一部分，我们将构建一个简单的降价博客。
+​
+  基础 环境要求：Node back to v4 and npm to v3.
+ import React from &amp;ldquo;react&amp;rdquo;;
+export default () =&amp;gt; Hello Gatsby!</description>
+    </item>
+    
+    <item>
+      <title>Fun</title>
+      <link>https://kehux.win/posts/fun/</link>
+      <pubDate>Thu, 14 Mar 2019 16:51:05 +0800</pubDate>
+      
+      <guid>https://kehux.win/posts/fun/</guid>
+      <description>R是我的一个同事。
+自从今年过完年后，他就在减肥。
+R说回家，亲戚见了他都会谈论他怎么长这么胖了。
+R的减肥计划实施的很快，他找了健身教练，开始恶补减肥知识。
+刚开始的一两天，R买了普洱茶，分给了大家。
+小姐姐说，普洱茶第一遍泡的要倒掉，称为洗茶。
+R不信，喝了一口是苦的，就对大家说，第一遍泡的要倒掉。
+R对于吃的变的很克制。
+第一周的他，只吃午饭。转眼R变的很憔悴。
+我拿了办公室的小零食，R就盯着我。
+我把小零食放下，R看着我说，相当于几个包子。
+ss吃棒棒糖，R在网站上查热量，相当于几个包子。
+第二周的他，告诉我们他减了十斤。
+他开始联系教练，开始了他的减脂餐。
+他每天都会先转一圈，看看大家的午餐。
+开始抱怨，我的饭好难吃，这什么啊，能吃吗？
+第三周的他，对于减肥餐好像已经习惯了。
+不变的是他还会每天巡视一下大家吃的什么。
+尔尔还会炫耀，给大家看看我的减脂餐。
+煮的小米饭、西兰花、鸡胸肉。
+R还会评价我的饭，他看着我的外卖说道。
+你点了我不爱吃的菜，茼蒿、西葫芦，
+R说你是不是爱吃口味奇特的菜，比如香菜。
+R diss 了我两天，结论是我点的饭不好吃。
+以后，跟着小姐姐点饭就对了。
+今天，月末，生日会。
+大家都拿了小蛋糕，
+R一直说高脂肪，高脂肪，高脂肪。
+然后忍不住的R，借口身边的同事没吃。
+拿了两块蛋糕。
+大家开始疯狂diss他，
+R你不是不吃吗？
+R吃一口长十斤。
+R你再吃前几周都白费了。
+R看着蛋糕说，我想吃。</description>
+    </item>
+    
+    <item>
+      <title>Flow</title>
+      <link>https://kehux.win/posts/flow/</link>
+      <pubDate>Thu, 14 Mar 2019 16:50:06 +0800</pubDate>
+      
+      <guid>https://kehux.win/posts/flow/</guid>
+      <description>安装 ONE: yarn add —dev babel-preset-flow
+Two: 配置.babel 在presets 字段中添加 “flow”字段
+THREE: yarn add —dev flow-bin
+FOUR:设置eslint and webstorm , yarn add —dev eslint-plugin-flowtype
+在webstorm 中设置，webstorm-preferences-&amp;gt;Languages &amp;amp; Frameworks-&amp;gt;JavaScript,在这个面板中设置JavaScript language version 为flow,设置flow 路径，选择项目下的node_modules/flow-bin/vender/flow
+Tip:如果路径下没有可以在flow-bin下选择其他文件
+选择之后点击apply或者ok即可。
+FIVE: yarn run flow init 类似eslint生成.flowconfig文件
+SIX：使用前最后一步配置， yarn run flow，如果报错，设置配置文件。
+常规配置ignore，option.忽略node_modules下的一些文件,一些包文件使用了flow，但有不规范的地方。option 文件设置文件后缀。
+[ignore]
+./node_modules/draft-js/.
+[include]
+[libs]
+[lints]
+[options]
+module.file_ext=.scss
+module.file_ext=.js
+开始  开发者经常会将Flow和React搭配使用，因此Flow可以高效的输入常用的和高级的React模式变得非常重要。这篇指南将指导你如何使用Flow创建更安全的React应用。
+在本指南中，我们将假定你了解React的基础知识并且着重考虑添加你已经熟悉的类型。我们将使用基于react-dom的例子，但是所有的模式也适用于其他环境像react-native。
+在React中配置Flow Flow可以和Babel更好的搭配，因此作为一个使用了Babel的React用户您无须花费更多时间去适应Flow。如果你需要通过Babel安装Flow，你可以参考这篇指南。
+Babel跟Create React App亦可以开箱即用，仅需安装Flow并创建一个.flowconfig即可。
+ 组件 了解如何使用Flow键入React类组件和无状态功能组件  将Flow输入React组件有着难以置信的作用。如果你使用了Flow，Flow将静态地确保你将使用组件按照它被设计的模式。
+在早期React库中提供了PropTypes去执行基础运行检查。Flow是更强大的，当你滥用组件时，它可以实时告诉你在不运行代码的情况下。</description>
+    </item>
+    
+    <item>
+      <title>web Evolution</title>
+      <link>https://kehux.win/posts/evolution/</link>
+      <pubDate>Thu, 14 Mar 2019 16:46:53 +0800</pubDate>
+      
+      <guid>https://kehux.win/posts/evolution/</guid>
+      <description>简单明快的早期时代  初期的开发模式前后端并没有分离，页面由JSP、PHP工程师在服务器生成，浏览器负责展示界面。
+从逻辑上来说，本该分开的连在一起必然有特殊的优势：
+1、本地搭建一个 tomcat 就可以开发了，简单明快，使用 VBScript 、JScript 等简单易懂的脚本语言，结合HTML代码，即可快速地完成网站的应用程序。
+2、无须compile编译，容易编写，可在服务器端直接执行，首屏渲染速度快，白屏时间短。
+3、使用普通的文本编辑器，如Windows的记事本，即可进行编辑设计。
+4、与浏览器无关(BrowserIndependence),客户端只要使用可执行HTML码的浏览器，即可浏览 Actbive Server Pages 所设计的网页内容。Active ServerPages 所使用的脚本语言 (VBScript 、 Jscript) 均在 WEB 服务器端执行，客户端的浏览器不需要能够执行这些脚本语言。
+5、Active Server Pages能与任何ActiveX scripting语言兼容。除了可使用VBScript或JScript语言来设计外，还通过plug－in的方式，使用由第三方所提供的其它脚本语言，譬如REXX 、Perl 、Tcl等。脚本引擎是处理脚本程序的COM(Component Object Model) 对象。
+6、可使用服务器端的脚本来产生客户端的脚本。
+7、ActiveX Server Components(ActiveX 服务器组件 )具有无限可扩充性。可以使用Visual Basic 、Java 、Visual C＋＋ 、COBOL等程序设计语言来编写你所需要的ActiveX Server Component 。
+也有致命的硬伤： 但是随着业务复杂程度的提高， server 变得越来越多，很多代码变得不那么清晰，就会出现很多灰色地带，有时候为了赶项目，为了完成紧急需求，就会早JSP里面糅杂大量的业务代码。积攒到一定阶段后，往往会带来高额的维护成本
+ 后端为主的 MVC 时代  为了降低复杂度，以后端为出发点，有了 Web Server 层的架构升级，比如 Structs、Spring MVC 等，成就了后端的 MVC 时代。
+代码可维护性得到明显好转，MVC 是个非常好的协作模式，从架构层面让开发者懂得什么代码应该写在什么地方。为了让 View 层更简单干脆，还可以选择 Velocity、Freemaker 等模板，使得模板里写不了 Java 代码。看起来是功能变弱了，但正是这种限制使得前后端分工更清晰。然而依旧并不是那么清晰，这个阶段的典型问题是：</description>
+    </item>
+    
+    <item>
+      <title>AC1019-LCM最小公倍数</title>
+      <link>https://kehux.win/posts/ac1019/</link>
+      <pubDate>Thu, 14 Mar 2019 16:45:29 +0800</pubDate>
+      
+      <guid>https://kehux.win/posts/ac1019/</guid>
+      <description> ACM 1019 Least Common Multiple
+问题描述 一组正整数的最小公倍数（LCM）是可以被该组中所有数字整除的最小正整数。例如，5,7和15的LCM是105。  输入 输入将由多个问题实例组成。输入的第一行将包含一个表示问题实例数量的整数。每个实例将由m n1 n2 n3 ... nm形式的单行组成，其中m是集合中的整数数量，n1 ... nm是整数。所有整数都是正数，位于32位整数的范围内。  输出 对于每个问题实例，输出包含相应LCM的单个行。所有结果都位于32位整数的范围内。  eg 输入 2 3 5 7 15 6 4 10296 936 1287 792 1  输出 105 10296  思路
+ 获取输入有几行数据 每行数据都存储到数组中 对数组进行排序 从小到大列举出最大数的倍数，当这个倍数也是另一个数的倍数时，就求得最小公倍数。  #include &amp;lt;iostream&amp;gt; using namespace std; int fun(int x,int y)//求两个数的最小公倍数 { if(x&amp;lt;y) { int temp=x; x=y; y=temp; } int r; int max=x,min=y; while((r=x%y)!=0) { x=y; y=r; } return max/y*min; } int main() { int n; cin&amp;gt;&amp;gt;n; while(n) { int len; cin&amp;gt;&amp;gt;len; int x1,x2,temp=1; for(int i=0;i&amp;lt;len;i++) { cin&amp;gt;&amp;gt;x2; temp=fun(temp,x2); x1=temp; } cout&amp;lt;&amp;lt;temp&amp;lt;&amp;lt;endl; n--; } return 0; }  </description>
+    </item>
+    
+    <item>
+      <title>AC</title>
+      <link>https://kehux.win/posts/ac/</link>
+      <pubDate>Thu, 14 Mar 2019 16:44:25 +0800</pubDate>
+      
+      <guid>https://kehux.win/posts/ac/</guid>
+      <description>今天AC了吗？
+机缘巧合我和cx有个约定。
+每天AC一道题，我是一个没有毅力的人。
+从来没有坚持过什么事情，
+连喜欢一个人，都是三天打渔，两天上网。
+哈哈哈哈哈哈哈哈
+我以前很佩服每天坚持做什么的人，
+既然羡慕，那就让自己也成为那样的人吧。
+— 2018-04-08</description>
+    </item>
+    
+  </channel>
+</rss>

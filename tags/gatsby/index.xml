@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gatsby on 柚紫</title>
+    <link>https://kehux.win/tags/gatsby/</link>
+    <description>Recent content in Gatsby on 柚紫</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 14 Mar 2019 16:51:52 +0800</lastBuildDate>
+    
+	<atom:link href="https://kehux.win/tags/gatsby/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Gatsby</title>
+      <link>https://kehux.win/posts/gatsby/</link>
+      <pubDate>Thu, 14 Mar 2019 16:51:52 +0800</pubDate>
+      
+      <guid>https://kehux.win/posts/gatsby/</guid>
+      <description>Gatsby React网站快速生成器 安装  npm install &amp;ndash;global gatsby-cli
+ #Gatsby快速入门
+使用Gatsby命令行  创建新项目 gatsby new gatsby-site
+ cd gatsby-site
+ gatsby develop Gastby 将会开启一个热加载环境，可以在本地8000端口看到
+ 在src/pages下进行编辑javascript页面。保存改动后，浏览器会实时刷新。
+ gatsby build Gastby 将会执行优化的生成构建，生成静态HTML和JavaScript包文件。
+ gatsby serve Gastby开启一个本地HTML服务去测试你构建的网站。
+  ## 目录
+ 基础 &amp;ndash;开始新项目、开发部署网站
+ 介绍如何在Gatsby中使用css。在css模块和Typography.js 中探索。
+ 探索嵌套布局。布局是网站的一部分，可以在多个页面（如页眉和页脚）中重复使用。
+ 了解如何使用Gatsby的数据层。探索源代码和变压器插件。介绍编程页面以及如何编写GraphQL查询。在本教程的这一部分，我们将构建一个简单的降价博客。
+​
+  基础 环境要求：Node back to v4 and npm to v3.
+ import React from &amp;ldquo;react&amp;rdquo;;
+export default () =&amp;gt; Hello Gatsby!</description>
+    </item>
+    
+  </channel>
+</rss>

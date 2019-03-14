@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Acm on 柚紫</title>
+    <link>https://kehux.win/tags/acm/</link>
+    <description>Recent content in Acm on 柚紫</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 14 Mar 2019 16:45:29 +0800</lastBuildDate>
+    
+	<atom:link href="https://kehux.win/tags/acm/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>AC1019-LCM最小公倍数</title>
+      <link>https://kehux.win/posts/ac1019/</link>
+      <pubDate>Thu, 14 Mar 2019 16:45:29 +0800</pubDate>
+      
+      <guid>https://kehux.win/posts/ac1019/</guid>
+      <description> ACM 1019 Least Common Multiple
+问题描述 一组正整数的最小公倍数（LCM）是可以被该组中所有数字整除的最小正整数。例如，5,7和15的LCM是105。  输入 输入将由多个问题实例组成。输入的第一行将包含一个表示问题实例数量的整数。每个实例将由m n1 n2 n3 ... nm形式的单行组成，其中m是集合中的整数数量，n1 ... nm是整数。所有整数都是正数，位于32位整数的范围内。  输出 对于每个问题实例，输出包含相应LCM的单个行。所有结果都位于32位整数的范围内。  eg 输入 2 3 5 7 15 6 4 10296 936 1287 792 1  输出 105 10296  思路
+ 获取输入有几行数据 每行数据都存储到数组中 对数组进行排序 从小到大列举出最大数的倍数，当这个倍数也是另一个数的倍数时，就求得最小公倍数。  #include &amp;lt;iostream&amp;gt; using namespace std; int fun(int x,int y)//求两个数的最小公倍数 { if(x&amp;lt;y) { int temp=x; x=y; y=temp; } int r; int max=x,min=y; while((r=x%y)!=0) { x=y; y=r; } return max/y*min; } int main() { int n; cin&amp;gt;&amp;gt;n; while(n) { int len; cin&amp;gt;&amp;gt;len; int x1,x2,temp=1; for(int i=0;i&amp;lt;len;i++) { cin&amp;gt;&amp;gt;x2; temp=fun(temp,x2); x1=temp; } cout&amp;lt;&amp;lt;temp&amp;lt;&amp;lt;endl; n--; } return 0; }  </description>
+    </item>
+    
+    <item>
+      <title>AC</title>
+      <link>https://kehux.win/posts/ac/</link>
+      <pubDate>Thu, 14 Mar 2019 16:44:25 +0800</pubDate>
+      
+      <guid>https://kehux.win/posts/ac/</guid>
+      <description>今天AC了吗？
+机缘巧合我和cx有个约定。
+每天AC一道题，我是一个没有毅力的人。
+从来没有坚持过什么事情，
+连喜欢一个人，都是三天打渔，两天上网。
+哈哈哈哈哈哈哈哈
+我以前很佩服每天坚持做什么的人，
+既然羡慕，那就让自己也成为那样的人吧。
+— 2018-04-08</description>
+    </item>
+    
+  </channel>
+</rss>
