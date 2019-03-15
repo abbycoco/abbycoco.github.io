@@ -4,7 +4,7 @@
 >> git pull origin master
 
 ##新建文章命令
-hugo new post/新建文章名字.md
+hugo new posts/新建文章名字.md
 ***
 新生成的文件会有如下代码：
 ```+++
