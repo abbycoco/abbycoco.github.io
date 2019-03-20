@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web on 柚紫</title>
+    <link>https://kehux.win/tags/web/</link>
+    <description>Recent content in Web on 柚紫</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 14 Mar 2019 16:46:53 +0800</lastBuildDate>
+    
+	<atom:link href="https://kehux.win/tags/web/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>web Evolution</title>
+      <link>https://kehux.win/posts/evolution/</link>
+      <pubDate>Thu, 14 Mar 2019 16:46:53 +0800</pubDate>
+      
+      <guid>https://kehux.win/posts/evolution/</guid>
+      <description>简单明快的早期时代  初期的开发模式前后端并没有分离，页面由JSP、PHP工程师在服务器生成，浏览器负责展示界面。
+从逻辑上来说，本该分开的连在一起必然有特殊的优势：
+1、本地搭建一个 tomcat 就可以开发了，简单明快，使用 VBScript 、JScript 等简单易懂的脚本语言，结合HTML代码，即可快速地完成网站的应用程序。
+2、无须compile编译，容易编写，可在服务器端直接执行，首屏渲染速度快，白屏时间短。
+3、使用普通的文本编辑器，如Windows的记事本，即可进行编辑设计。
+4、与浏览器无关(BrowserIndependence),客户端只要使用可执行HTML码的浏览器，即可浏览 Actbive Server Pages 所设计的网页内容。Active ServerPages 所使用的脚本语言 (VBScript 、 Jscript) 均在 WEB 服务器端执行，客户端的浏览器不需要能够执行这些脚本语言。
+5、Active Server Pages能与任何ActiveX scripting语言兼容。除了可使用VBScript或JScript语言来设计外，还通过plug－in的方式，使用由第三方所提供的其它脚本语言，譬如REXX 、Perl 、Tcl等。脚本引擎是处理脚本程序的COM(Component Object Model) 对象。
+6、可使用服务器端的脚本来产生客户端的脚本。
+7、ActiveX Server Components(ActiveX 服务器组件 )具有无限可扩充性。可以使用Visual Basic 、Java 、Visual C＋＋ 、COBOL等程序设计语言来编写你所需要的ActiveX Server Component 。
+也有致命的硬伤： 但是随着业务复杂程度的提高， server 变得越来越多，很多代码变得不那么清晰，就会出现很多灰色地带，有时候为了赶项目，为了完成紧急需求，就会早JSP里面糅杂大量的业务代码。积攒到一定阶段后，往往会带来高额的维护成本
+ 后端为主的 MVC 时代  为了降低复杂度，以后端为出发点，有了 Web Server 层的架构升级，比如 Structs、Spring MVC 等，成就了后端的 MVC 时代。
+代码可维护性得到明显好转，MVC 是个非常好的协作模式，从架构层面让开发者懂得什么代码应该写在什么地方。为了让 View 层更简单干脆，还可以选择 Velocity、Freemaker 等模板，使得模板里写不了 Java 代码。看起来是功能变弱了，但正是这种限制使得前后端分工更清晰。然而依旧并不是那么清晰，这个阶段的典型问题是：</description>
+    </item>
+    
+  </channel>
+</rss>

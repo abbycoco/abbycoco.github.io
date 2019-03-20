@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		 
+			
+  
+    <meta name="twitter:card" content="summary"/>
+    
+      <meta name="twitter:image" content="https://kehux.win/images/avatar.png" />
+    
+  
+  
+  <meta name="twitter:title" content="GraphQL"/>
+  <meta name="twitter:description" content="GraphQL"/>
+  
+    <meta name="twitter:site" content="@your_twitter_id"/>
+  
+  
+  
+  
+    <meta name="twitter:creator" content="@柚紫"/>
+  
+
+
+
+		
+		<meta name="author" content="柚紫">
+		<meta name="description" content="我最爱的人是我自己个儿。">
+		<meta name="generator" content="Hugo 0.54.0" />
+		<title>GraphQL &middot; 柚紫</title>
+		<link rel="shortcut icon" href="https://kehux.win/images/favicon.ico">
+		<link rel="stylesheet" href="https://kehux.win/css/style.css">
+		<link rel="stylesheet" href="https://kehux.win/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="https://kehux.win/css/font-awesome.min.css">
+		
+
+		
+		<link href="https://kehux.win/index.xml" rel="alternate" type="application/rss+xml" title="柚紫" />
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='https://kehux.win/'> <span class="arrow">←</span>Home</a>
+	
+	<a href='https://kehux.win/posts'>Archive</a>
+	<a href='https://kehux.win/tags'>Tags</a>
+	<a href='https://kehux.win/about'>About</a>
+
+	
+
+	
+	<a class="cta" href="https://kehux.win/index.xml">Subscribe</a>
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        GraphQL
+                    </h1>
+                    <h2 class="headline">
+                    Mar 14, 2019 16:52
+                    · 234 words
+                    · 2 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="https://kehux.win/tags/tools">tools</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                  
+                    <div id="toc">
+                      <nav id="TableOfContents">
+<ul>
+<li><a href="#graphql-入门">GraphQL 入门</a>
+<ul>
+<li><a href="#变异-mutation-修改数据">变异（mutation， 修改数据）</a></li>
+</ul></li>
+</ul>
+</nav>
+                    </div>
+                  
+                
+                <section id="post-body">
+                    
+
+<h1 id="graphql-入门">GraphQL 入门</h1>
+
+<p>GraphQL是一个用于API的查询语言，使用你自己定义的类型系统在服务器端进行查询。</p>
+
+<ol>
+<li><p>一旦GraphQL运行，它可以用来发送GraphQL查询去验证和执行。</p></li>
+
+<li><p>GraphQL的实现：</p>
+
+<ul>
+<li>使用Nodejs实现GraphQL服务器</li>
+</ul>
+
+<pre><code> mkdir test &amp;&amp; cd ./test
+ npm install express --save
+ npm install babel --save
+ touch ./server.js
+ touch ./index.js
+</code></pre>
+
+<pre><code> index.js:
+ require('babel/register');
+ require('./server.js');
+</code></pre>
+
+<pre><code> //server.js
+ import express from 'express';
+
+ let app = express();
+ let PORT = 3000;
+
+ app.post('/graphql', (req, res) =&gt; {
+   res.send('Hello!');
+ });
+
+ let server = app.listen(PORT, function() {
+   let host = server.address().address;
+   let port = server.address().port;
+
+   console.log('GraphQL listening at http://%s:%s', host, port);
+</code></pre>
+
+<ul>
+<li>编写GrapQL Schema</li>
+</ul>
+
+<p>添加Schema（Schema 是GraphQL请求的入口，用户的GraphQL请求会对应到具体的Schema ）</p>
+
+<p>GraphQL请求：</p>
+
+<pre><code> query getHightScore { score }
+ query getHightScore(limit: 10) { score }
+</code></pre>
+
+<p>加有查询条件的GraphQL请求就是Graphql的schema，通过schema可以定义服务器的显影内容。</p>
+
+<ul>
+<li>使用graphql</li>
+</ul>
+
+<pre><code>   npm install graphql --save
+</code></pre>
+
+<p>作用：包装服务器schema并处理GraphQL请求。</p>
+
+<p>处理请求内容， body-parser</p>
+
+<pre><code>   npm install body-parser --save
+</code></pre>
+
+<p>​</p></li>
+</ol>
+
+<ul>
+<li>创建schema</li>
+</ul>
+
+<pre><code>  //schema.js
+  import {
+    GraphQLObjectType,
+    GraphQLSchema,
+    GraphQLInt
+  } from 'graphql';
+
+  let count = 0;
+
+  let schema = new GraphQLSchema({
+    query: new GraphQLObjectType({
+      name: 'RootQueryType',
+      fields: {
+        count: {
+          type: GraphQLInt,
+          resolve: function() {
+            return count;
+          }
+        }
+      }
+    })
+  });
+
+  export default schema;
+
+</code></pre>
+
+<p>​</p>
+
+<ul>
+<li>连接schema（将GraphQL schema 和服务器连接起来）</li>
+</ul>
+
+<pre><code>  //server.js
+  import express from 'express';
+  import schema from './schema';
+
+  import { graphql } from 'graphql';
+  import bodyParser from 'body-parser';
+
+  let app = express();
+  let PORT = 3000;
+
+  //Parse post content as text
+  app.use(bodyParser.text({ type: 'application/graphql' }));
+
+  app.post('/graphql', (req, res) =&gt; {
+    //GraphQL executor
+    graphql(schema, req.body)
+    .then((result) =&gt; {
+      res.send(JSON.stringify(result, null, 2));
+    })
+  });
+
+  let server = app.listen(PORT, function() {
+    let host = server.address().address;
+    let port = server.address().port;
+
+    console.log('GraphQL listening at http://%s:%s', host, port);
+  });
+</code></pre>
+
+<p>​</p>
+
+<h2 id="变异-mutation-修改数据">变异（mutation， 修改数据）</h2>
+
+<p>GraphQL中将对数据的修改操作称为mutation。</p>
+
+<p>定义mutation：</p>
+
+<pre><code>let schema = new GraphQLSchema({
+  query: ...
+  mutation: //TODO
+});
+</code></pre>
+
+<p>启动本地服务后，在浏览器界面输入查询语句即可。</p>
+
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1fq0kkf84m5j31ao0rfq7f.jpg" alt="image-20180404112840070" /></p>
+
+                </section>
+            </article>
+
+            
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2fkehux.win%2fposts%2fgraphql%2f - GraphQL by @your_twitter_id"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+            
+
+            
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'your_disqus_short_name'; 
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+            
+
+            
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.facebook.com/nodejh">
+        <i class="fa fa-facebook-square"></i>
+    </a>
+    
+    <a class="symbol" href="https://www.github.com/nodejh">
+        <i class="fa fa-github-square"></i>
+    </a>
+    
+    <a class="symbol" href="https://www.twitter.com/nodejh">
+        <i class="fa fa-twitter-square"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+       © Copyright 2019 <i class="fa fa-heart" aria-hidden="true"></i> 柚紫
+    
+    </p>
+    <p class="small">
+        Powered by <a href="http://www.gohugo.io/">Hugo</a> Theme By <a href="https://github.com/nodejh/hugo-theme-cactus-plus">nodejh</a>
+    </p>
+</footer>
+
+        </section>
+
+        <script src="https://kehux.win/js/jquery-3.3.1.min.js"></script>
+<script src="https://kehux.win/js/main.js"></script>
+<script src="https://kehux.win/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'your_google_analytics_id', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+
+    </body>
+</html>

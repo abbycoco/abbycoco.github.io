@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>React on 柚紫</title>
+    <link>https://kehux.win/categories/react/</link>
+    <description>Recent content in React on 柚紫</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 14 Mar 2019 16:50:06 +0800</lastBuildDate>
+    
+	<atom:link href="https://kehux.win/categories/react/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Flow</title>
+      <link>https://kehux.win/posts/flow/</link>
+      <pubDate>Thu, 14 Mar 2019 16:50:06 +0800</pubDate>
+      
+      <guid>https://kehux.win/posts/flow/</guid>
+      <description>安装 ONE: yarn add —dev babel-preset-flow
+Two: 配置.babel 在presets 字段中添加 “flow”字段
+THREE: yarn add —dev flow-bin
+FOUR:设置eslint and webstorm , yarn add —dev eslint-plugin-flowtype
+在webstorm 中设置，webstorm-preferences-&amp;gt;Languages &amp;amp; Frameworks-&amp;gt;JavaScript,在这个面板中设置JavaScript language version 为flow,设置flow 路径，选择项目下的node_modules/flow-bin/vender/flow
+Tip:如果路径下没有可以在flow-bin下选择其他文件
+选择之后点击apply或者ok即可。
+FIVE: yarn run flow init 类似eslint生成.flowconfig文件
+SIX：使用前最后一步配置， yarn run flow，如果报错，设置配置文件。
+常规配置ignore，option.忽略node_modules下的一些文件,一些包文件使用了flow，但有不规范的地方。option 文件设置文件后缀。
+[ignore]
+./node_modules/draft-js/.
+[include]
+[libs]
+[lints]
+[options]
+module.file_ext=.scss
+module.file_ext=.js
+开始  开发者经常会将Flow和React搭配使用，因此Flow可以高效的输入常用的和高级的React模式变得非常重要。这篇指南将指导你如何使用Flow创建更安全的React应用。
+在本指南中，我们将假定你了解React的基础知识并且着重考虑添加你已经熟悉的类型。我们将使用基于react-dom的例子，但是所有的模式也适用于其他环境像react-native。
+在React中配置Flow Flow可以和Babel更好的搭配，因此作为一个使用了Babel的React用户您无须花费更多时间去适应Flow。如果你需要通过Babel安装Flow，你可以参考这篇指南。
+Babel跟Create React App亦可以开箱即用，仅需安装Flow并创建一个.flowconfig即可。
+ 组件 了解如何使用Flow键入React类组件和无状态功能组件  将Flow输入React组件有着难以置信的作用。如果你使用了Flow，Flow将静态地确保你将使用组件按照它被设计的模式。
+在早期React库中提供了PropTypes去执行基础运行检查。Flow是更强大的，当你滥用组件时，它可以实时告诉你在不运行代码的情况下。</description>
+    </item>
+    
+  </channel>
+</rss>

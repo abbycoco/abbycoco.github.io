@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		 
+			
+  
+    <meta name="twitter:card" content="summary"/>
+    
+      <meta name="twitter:image" content="https://kehux.win/images/avatar.png" />
+    
+  
+  
+  <meta name="twitter:title" content="Gatsby"/>
+  <meta name="twitter:description" content="Gatsby的使用"/>
+  
+    <meta name="twitter:site" content="@your_twitter_id"/>
+  
+  
+  
+  
+    <meta name="twitter:creator" content="@柚紫"/>
+  
+
+
+
+		
+		<meta name="author" content="柚紫">
+		<meta name="description" content="我最爱的人是我自己个儿。">
+		<meta name="generator" content="Hugo 0.54.0" />
+		<title>Gatsby &middot; 柚紫</title>
+		<link rel="shortcut icon" href="https://kehux.win/images/favicon.ico">
+		<link rel="stylesheet" href="https://kehux.win/css/style.css">
+		<link rel="stylesheet" href="https://kehux.win/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="https://kehux.win/css/font-awesome.min.css">
+		
+
+		
+		<link href="https://kehux.win/index.xml" rel="alternate" type="application/rss+xml" title="柚紫" />
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='https://kehux.win/'> <span class="arrow">←</span>Home</a>
+	
+	<a href='https://kehux.win/posts'>Archive</a>
+	<a href='https://kehux.win/tags'>Tags</a>
+	<a href='https://kehux.win/about'>About</a>
+
+	
+
+	
+	<a class="cta" href="https://kehux.win/index.xml">Subscribe</a>
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        Gatsby
+                    </h1>
+                    <h2 class="headline">
+                    Mar 14, 2019 16:51
+                    · 420 words
+                    · 2 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="https://kehux.win/tags/gatsby">Gatsby</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                  
+                    <div id="toc">
+                      <nav id="TableOfContents">
+<ul>
+<li><a href="#gatsby-react网站快速生成器">Gatsby React网站快速生成器</a>
+<ul>
+<li><a href="#安装">安装</a></li>
+<li><a href="#使用gatsby命令行">使用Gatsby命令行</a></li>
+<li><a href="#基础">基础</a>
+<ul>
+<li><a href="#页面之间进行跳转">页面之间进行跳转</a></li>
+<li><a href="#部署">部署</a></li>
+</ul></li>
+<li><a href="#创建全局样式">创建全局样式</a>
+<ul>
+<li><a href="#typography-js">Typography.js</a></li>
+</ul></li>
+<li><a href="#安装使用">安装使用</a>
+<ul>
+<li><a href="#css-modules">CSS Modules</a></li>
+</ul></li>
+<li><a href="#布局">布局</a>
+<ul>
+<li><a href="#我们的第一个布局页面">我们的第一个布局页面</a></li>
+</ul></li>
+<li><a href="#第四部分">第四部分</a>
+<ul>
+<li><a href="#gatsby中的数据">Gatsby中的数据</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+                    </div>
+                  
+                
+                <section id="post-body">
+                    
+
+<h1 id="gatsby-react网站快速生成器">Gatsby React网站快速生成器</h1>
+
+<h2 id="安装">安装</h2>
+
+<blockquote>
+<p>npm install &ndash;global gatsby-cli</p>
+</blockquote>
+
+<p>#Gatsby快速入门</p>
+
+<h2 id="使用gatsby命令行">使用Gatsby命令行</h2>
+
+<ol>
+<li><p>创建新项目  <code>gatsby new gatsby-site</code></p></li>
+
+<li><p><code>cd gatsby-site</code></p></li>
+
+<li><p><code>gatsby develop</code>  Gastby 将会开启一个热加载环境，可以在本地8000端口看到</p></li>
+
+<li><p>在src/pages下进行编辑javascript页面。保存改动后，浏览器会实时刷新。</p></li>
+
+<li><p><code>gatsby build</code>  Gastby 将会执行优化的生成构建，生成静态HTML和JavaScript包文件。</p></li>
+
+<li><p><code>gatsby serve</code> Gastby开启一个本地HTML服务去测试你构建的网站。</p></li>
+</ol>
+
+<p>## 目录</p>
+
+<ul>
+<li><p>基础 &ndash;开始新项目、开发部署网站</p></li>
+
+<li><p>介绍如何在Gatsby中使用css。在css模块和Typography.js 中探索。</p></li>
+
+<li><p>探索嵌套布局。布局是网站的一部分，可以在多个页面（如页眉和页脚）中重复使用。</p></li>
+
+<li><p>了解如何使用Gatsby的数据层。探索源代码和变压器插件。介绍编程页面以及如何编写GraphQL查询。在本教程的这一部分，我们将构建一个简单的降价博客。</p>
+
+<p>​</p></li>
+</ul>
+
+<h2 id="基础">基础</h2>
+
+<p>环境要求：Node back to v4 and npm to v3.</p>
+
+<blockquote>
+<p>import React from &ldquo;react&rdquo;;</p>
+
+<p>export default () =&gt; <div style={{ color: `blue` }}>Hello Gatsby!</div>;</p>
+</blockquote>
+
+<h3 id="页面之间进行跳转">页面之间进行跳转</h3>
+
+<p>1.<code>import Link from &quot;gatsby-link&quot;;</code></p>
+
+<p>2.<code>&lt;Link to=&quot;/page-2/&quot;&gt;Link&lt;/Link&gt;</code></p>
+
+<p>3.src/pages/page-2.js就是你将要跳转的页面</p>
+
+<h3 id="部署">部署</h3>
+
+<p><code>gatsby build</code></p>
+
+<h2 id="创建全局样式">创建全局样式</h2>
+
+<p>每个网站都会有一些全局样式。一般会包含网站模版和背景颜色。</p>
+
+<h3 id="typography-js">Typography.js</h3>
+
+<p>Typography.js是一个javascript库生成typographic CSS。</p>
+
+<p>取代直接为不同的HTML元素设置不同的font-size，你告诉Typography.js你想要的基础的baseFontSize和baseLineHeight，他会为你所有的元素生成基础CSS。</p>
+
+<pre><code>这使得更改站点上所有元素的字体大小而无需直接修改数十个CSS规则变得微不足道。
+</code></pre>
+
+<p>使用它就像下面这样：</p>
+
+<pre><code>import Typography from &quot;typography&quot;;
+
+const typography = new Typography({
+  baseFontSize: &quot;18px&quot;,
+  baseLineHeight: 1.45,
+  headerFontFamily: [
+    &quot;Avenir Next&quot;,
+    &quot;Helvetica Neue&quot;,
+    &quot;Segoe UI&quot;,
+    &quot;Helvetica&quot;,
+    &quot;Arial&quot;,
+    &quot;sans-serif&quot;,
+  ],
+  bodyFontFamily: [&quot;Georgia&quot;, &quot;serif&quot;],
+});
+</code></pre>
+
+<h2 id="安装使用">安装使用</h2>
+
+<blockquote>
+<p>npm install &ndash;save gatsby-plugin-typography</p>
+
+<p>module.exports = {
+  plugins: [<code>gatsby-plugin-typography</code>],
+};</p>
+</blockquote>
+
+<h3 id="css-modules">CSS Modules</h3>
+
+<blockquote>
+<p>引入.module.css</p>
+
+<p>使用import styles from &ldquo;./about-css-modules.module.css&rdquo;</p>
+
+<p>className={styles.username}</p>
+</blockquote>
+
+<h2 id="布局">布局</h2>
+
+<p>Gatsby 帮你创造一个布局组件。布局组件是你网站的一部分你可以分享在多个页面。例如，Gatsby通常会有一个共享的头部和底部。另外常见的就是侧边栏和导航栏。</p>
+
+<p>在这个页面，左侧导航栏(假设你有一个大设备)和头部导航是gatsbyjs.org’s的页面组件。</p>
+
+<p>让我们潜入并且探索Gatsby的布局吧。</p>
+
+<p>首先，创建一个新的网站为这部分的教程。</p>
+
+<pre><code>gatsby new tutorial-part-three https://github.com/gatsbyjs/gatsby-starter-hello-world
+</code></pre>
+
+<p>一旦开始了命令，就是在安装gatsby-plugin-typography。为了保证Typography.js版本，让我们尝试Fairy Gates版本：</p>
+
+<pre><code>npm install --save gatsby-plugin-typography typography-theme-fairy-gates
+</code></pre>
+
+<p>创建一个src/utils目录，然后再创建typography模版文件在<code>src/utils/typography.js</code>:</p>
+
+<pre><code>import Typography from &quot;typography&quot;;
+import fairyGateTheme from &quot;typography-theme-fairy-gates&quot;;
+
+const typography = new Typography(fairyGateTheme);
+
+export default typography;
+
+</code></pre>
+
+<p>然后把我们网站的gatsby-config.js放在网站根部，并且添加如下代码：</p>
+
+<p><code>module.exports = {  plugins: [    {      resolve:</code>gatsby-plugin-typography<code>,      options: {        pathToConfigModule:</code>src/utils/typography.js<code>,      },    },  ],};</code></p>
+
+<p>现在，让我们添加几个不同的界面：一个前端界面，一个关于界面和一个关于我们。</p>
+
+<p>src/pages/index.js</p>
+
+<p>import React from &ldquo;react&rdquo;;</p>
+
+<p>export default () =&gt; (
+  <div>
+​    <h1>Hi! I&rsquo;m building a fake Gatsby site as part of a tutorial!</h1>
+​    <p>
+​      What do I like to do? Lots of course but definitely enjoy building
+​      websites.
+​    </p>
+  </div>
+);</p>
+
+<p><code>src/pages/about.js</code></p>
+
+<pre><code>import React from &quot;react&quot;;
+
+export default () =&gt; (
+  &lt;div&gt;
+    &lt;h1&gt;About me&lt;/h1&gt;
+    &lt;p&gt;I’m good enough, I’m smart enough, and gosh darn it, people like me!&lt;/p&gt;
+  &lt;/div&gt;
+);
+
+</code></pre>
+
+<p><code>src/pages/contact.js</code></p>
+
+<pre><code>import React from &quot;react&quot;;
+
+export default () =&gt; (
+  &lt;div&gt;
+    &lt;h1&gt;I'd love to talk! Email me at the address below&lt;/h1&gt;
+    &lt;p&gt;
+      &lt;a href=&quot;mailto:me@example.com&quot;&gt;me@example.com&lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;
+);
+
+</code></pre>
+
+<p>现在我们对于个人网站有了一个很好的开端。</p>
+
+<p>但是这还有一些问题。首先，如果哪个内容在教程的屏幕正中心那就非常好了。其二，我们应该有一个全局的导航方便浏览者去观察和去浏览每个子页面。</p>
+
+<p>让我们尝试解决这些问题通过创建我们的第一个页面。</p>
+
+<h3 id="我们的第一个布局页面">我们的第一个布局页面</h3>
+
+<p>首先，在src/layouts创建一个新的目录。所有的布局组件应该在这个目录下方。</p>
+
+<p>让我们创建一个最基础的布局组件在src/layouts/index.js：</p>
+
+<pre><code>import React from &quot;react&quot;;
+
+export default ({ children }) =&gt; (
+  &lt;div style={{ margin: `0 auto`, maxWidth: 650, padding: `0 1rem` }}&gt;
+    {children()}
+  &lt;/div&gt;
+);
+
+</code></pre>
+
+<p>注意不像React其他的*children*，这个*children*传递的是一个方法并且需要被执行。</p>
+
+<p>停止gatsby develop重启就会看到新的页面效果。</p>
+
+<p>非常好，页面起作用了！现在我们的内容正如所期待的那样宽650px。</p>
+
+<p>现在让我们增加一个相同的文件在标题文件。</p>
+
+<pre><code>import React from &quot;react&quot;;
+
+export default ({ children }) =&gt;
+  &lt;div style={{ margin: `0 auto`, maxWidth: 650, padding: `0 1rem` }}&gt;
+    &lt;h3&gt;MySweetSite&lt;/h3&gt;
+    {children()}
+  &lt;/div&gt;
+
+</code></pre>
+
+<p>如果我们去我们的任何一个界面我们会看到相同的标题例如about页面。</p>
+
+<p><a href="https://www.gatsbyjs.org/static/with-title-edb105d20e6a8980efbf5313715dfb57-acb38.png"><img src="https://www.gatsbyjs.org/static/with-title-edb105d20e6a8980efbf5313715dfb57-c4266.png" alt="with-title" /></a></p>
+
+<p>让我们为我们的页面添加导航链接</p>
+
+<pre><code>import React from &quot;react&quot;;
+import Link from &quot;gatsby-link&quot;;
+
+const ListLink = props =&gt;
+  &lt;li style={{ display: `inline-block`, marginRight: `1rem` }}&gt;
+    &lt;Link to={props.to}&gt;
+      {props.children}
+    &lt;/Link&gt;
+  &lt;/li&gt;
+
+export default ({ children }) =&gt;
+  &lt;div style={{ margin: `0 auto`, maxWidth: 650, padding: `1.25rem 1rem` }}&gt;
+    &lt;header style={{ marginBottom: `1.5rem` }}&gt;
+      &lt;Link to=&quot;/&quot; style={{ textShadow: `none`, backgroundImage: `none` }}&gt;
+        &lt;h3 style={{ display: `inline` }}&gt;MySweetSite&lt;/h3&gt;
+      &lt;/Link&gt;
+      &lt;ul style={{ listStyle: `none`, float: `right` }}&gt;
+        &lt;ListLink to=&quot;/&quot;&gt;Home&lt;/ListLink&gt;
+        &lt;ListLink to=&quot;/about/&quot;&gt;About&lt;/ListLink&gt;
+        &lt;ListLink to=&quot;/contact/&quot;&gt;Contact&lt;/ListLink&gt;
+      &lt;/ul&gt;
+    &lt;/header&gt;
+    {children()}
+  &lt;/div&gt;
+
+</code></pre>
+
+<p><a href="https://www.gatsbyjs.org/static/with-navigation-420c464b89f35cb6394f134026fe3bc1-acb38.png"><img src="https://www.gatsbyjs.org/static/with-navigation-420c464b89f35cb6394f134026fe3bc1-c4266.png" alt="with-navigation" /></a></p>
+
+<p>现在我们做到了！一个有三个页面的网站拥有一个全局的导航。</p>
+
+<p>你新的布局组件你可以增加头部、尾部和全局导航，侧边栏等等。</p>
+
+<h2 id="第四部分">第四部分</h2>
+
+<p>在本教程中，我们将前往新的领域，这将需要一些大脑扩展来充分理解。在接下来的两部分教程中，我们将深入到Gatsby数据层，这是Gatsby的一个强大功能，可让您轻松地从Markdown，WordPress，无头CMS和其他所有类型的数据源构建网站。</p>
+
+<pre><code>Gatsby的数据层由GraphQL支持。如果你是GraphQL的新手，这部分可能会感觉有些压倒性。关于GraphQL的深入教程，我们推荐如何使用GraphQL。
+</code></pre>
+
+<h3 id="gatsby中的数据">Gatsby中的数据</h3>
+
+<p>一个网站拥有四部分，HTML，CSS，JS，和数据。前一半教程我们侧重在前三项，现在我们将学习如何使用数据在Gatsby网站中。</p>
+
+<p>什么是数据？</p>
+
+<p>一个非常科学的答案就是，数据就像“字符串”，整数、对象等等。</p>
+
+<pre><code>到目前为止，我们一直在编写文本并直接在组件中添加图像。这是建立许多网站的绝佳方式。但是，通常您想要将数据存储在组件外，然后根据需要将数据导入组件。
+</code></pre>
+
+<pre><code>例如，如果您使用WordPress构建网站（所以其他贡献者有一个用于添加和维护内容的良好界面）和Gatsby，则该网站（网页和帖子）的数据在WordPress中，并根据需要提取数据，进入你的组件。
+</code></pre>
+
+<pre><code>数据也可以生存在Markdown，CSV等文件类型以及各种数据库和API中。
+</code></pre>
+
+                </section>
+            </article>
+
+            
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2fkehux.win%2fposts%2fgatsby%2f - Gatsby by @your_twitter_id"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+            
+
+            
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'your_disqus_short_name'; 
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+            
+
+            
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.facebook.com/nodejh">
+        <i class="fa fa-facebook-square"></i>
+    </a>
+    
+    <a class="symbol" href="https://www.github.com/nodejh">
+        <i class="fa fa-github-square"></i>
+    </a>
+    
+    <a class="symbol" href="https://www.twitter.com/nodejh">
+        <i class="fa fa-twitter-square"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+       © Copyright 2019 <i class="fa fa-heart" aria-hidden="true"></i> 柚紫
+    
+    </p>
+    <p class="small">
+        Powered by <a href="http://www.gohugo.io/">Hugo</a> Theme By <a href="https://github.com/nodejh/hugo-theme-cactus-plus">nodejh</a>
+    </p>
+</footer>
+
+        </section>
+
+        <script src="https://kehux.win/js/jquery-3.3.1.min.js"></script>
+<script src="https://kehux.win/js/main.js"></script>
+<script src="https://kehux.win/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'your_google_analytics_id', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+
+    </body>
+</html>

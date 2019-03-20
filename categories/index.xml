@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on 柚紫</title>
+    <link>https://kehux.win/categories/</link>
+    <description>Recent content in Categories on 柚紫</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 14 Mar 2019 16:45:29 +0800</lastBuildDate>
+    
+	<atom:link href="https://kehux.win/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Acm</title>
+      <link>https://kehux.win/categories/acm/</link>
+      <pubDate>Thu, 14 Mar 2019 16:45:29 +0800</pubDate>
+      
+      <guid>https://kehux.win/categories/acm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fun</title>
+      <link>https://kehux.win/categories/fun/</link>
+      <pubDate>Thu, 14 Mar 2019 16:51:05 +0800</pubDate>
+      
+      <guid>https://kehux.win/categories/fun/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gatsby</title>
+      <link>https://kehux.win/categories/gatsby/</link>
+      <pubDate>Thu, 14 Mar 2019 16:51:52 +0800</pubDate>
+      
+      <guid>https://kehux.win/categories/gatsby/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Moment</title>
+      <link>https://kehux.win/categories/moment/</link>
+      <pubDate>Thu, 14 Mar 2019 16:54:37 +0800</pubDate>
+      
+      <guid>https://kehux.win/categories/moment/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>React</title>
+      <link>https://kehux.win/categories/react/</link>
+      <pubDate>Thu, 14 Mar 2019 16:50:06 +0800</pubDate>
+      
+      <guid>https://kehux.win/categories/react/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tools</title>
+      <link>https://kehux.win/categories/tools/</link>
+      <pubDate>Thu, 14 Mar 2019 16:53:19 +0800</pubDate>
+      
+      <guid>https://kehux.win/categories/tools/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Web</title>
+      <link>https://kehux.win/categories/web/</link>
+      <pubDate>Thu, 14 Mar 2019 16:46:53 +0800</pubDate>
+      
+      <guid>https://kehux.win/categories/web/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
